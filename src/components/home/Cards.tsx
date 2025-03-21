@@ -43,7 +43,7 @@ const Cards: React.FC = () =>{
 
 
                 return (
-                    <div key={index} className={`flex items-center gap-4 shadow shadow-${card.color} rounded-xl px-4 py-2`}>
+                    <div key={index} className={`flex items-center gap-4 shadow shadow-${card.color} px-4 py-2`}>
                         <div className={`p-3 shadow-2xl rounded-lg text-white bg-${card.color}`}>
                             {card.icon}
                         </div>

@@ -61,7 +61,7 @@ export const Menus: MenuItem[] = [
        }
     ], 
     key: "gestioneClienti" },
-  { title: "Gestione del peronale", icon: FaFileImage, href: '/personal-management' },
+  { title: "Gestione Peronale", icon: FaFileImage, href: '/personal-management' },
   { title: "Note generali", icon: FaFileImage, href: '/' },
   { title: "Plugins", icon: FaPlug, href: '/' },
   { title: "idk", icon: FaPlug, href: '/' },

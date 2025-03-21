@@ -1,6 +1,8 @@
 'use client'
+import CustomerTable from '@/components/home/TableLocation';
 import Cards from '../components/home/Cards'
 import React, { useEffect, useState } from "react";
+import TableClient from '@/components/home/TableLocation';
 
 
 const Home: React.FC = ()=>{
@@ -29,12 +31,15 @@ const Home: React.FC = ()=>{
     // console.log(data);
     
     return (
-        <div className="p-10 flex flex-col gap-10">
+        <div className="p-10 flex flex-col gap-18">
             <div>
-                <h2 className="text-6xl">Home</h2>
-                <p>Benvenuto sul nostro gestionale...</p>
+                <h2 className="text-4xl">Home</h2>
+                <p className='text-sm text-red-600'>Benvenuto sul nostro gestionale...</p>
             </div>
-            <Cards />
+            <div className='flex flex-col gap-24'>
+                <Cards />
+                <TableClient />
+            </div>
         </div>
     ) 
 }
