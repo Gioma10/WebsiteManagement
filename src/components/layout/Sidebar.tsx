@@ -93,9 +93,11 @@ const App: React.FC = () => {
                     {subMenu.subItems && subMenus[subMenu.key || ""] && (
                       <ul className="pl-3 pt-4 text-zinc-300">
                         {subMenu.subItems.map((subItem, subItemIndex) => (
-                          <li key={subItemIndex} className="text-sm flex items-center gap-x-2 py-3 px-2 hover:bg-gray-900 rounded-lg">
-                            {subItem}
-                          </li>
+                          <Link key={subItemIndex} href={subItem.href}>
+                            <li className="text-sm flex items-center gap-x-2 py-3 px-2 hover:bg-gray-900 rounded-lg">
+                              {subItem.subTitle}
+                            </li>
+                          </Link>
                         ))}
                       </ul>
                     )}

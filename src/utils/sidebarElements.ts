@@ -7,7 +7,7 @@ interface MenuItem {
   title: string;
   icon: React.ComponentType<any>;
   href: string;
-  subMenu?: {title: string, subItems?: string[], key?: string }[];
+  subMenu?: {title: string, subItems?: {subTitle: string, href: string}[], key?: string }[];
   key?: string;
 }
 export const Menus: MenuItem[] = [
@@ -20,24 +20,24 @@ export const Menus: MenuItem[] = [
         title: "Plugin per foto",
         key: 'pluginForPhoto',
         subItems: [
-          'Assign IMG SKU',
-          'Upload IMG via SKU',
-          'Remove IMG BG',
+          {subTitle: 'Assign IMG SKU', href: '/assign-img-sku'},
+          {subTitle: 'Upload IMG via SKU',href: '/' },
+          {subTitle: 'Remove IMG BG', href: '/'}
         ]
        },
       {
         title: "Plugin per SEO",
         key: 'pluginForSeo',
         subItems: [
-          'Optimize IMG',
-          'Yoast Prompt AI',
+          {subTitle: 'Optimize IMG', href: '/'},
+          {subTitle: 'Yoast Prompt AI', href: '/'}
         ]
        },
       {
         title: "Plugin per GDPR",
         key: 'pluginForGdpr',
         subItems: [
-          'GDPR Doc Generator',
+          {subTitle: 'GDPR Doc Generator', href: '/'}
         ]
        }
     ], 
@@ -50,7 +50,7 @@ export const Menus: MenuItem[] = [
         title: "General",
         key: 'general',
         subItems: [
-          'GDPR Doc Generator',
+         {subTitle: 'GDPR Doc Generator', href: '/'}
         ]
        },
        {
